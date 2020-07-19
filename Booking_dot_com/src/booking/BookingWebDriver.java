@@ -45,6 +45,7 @@ public class BookingWebDriver implements WebDriver {
 		default:
 			throw new InvalidParameterException("Invalid Browser");
 		}
+		webDriver.manage().window().maximize();
 		return webDriver;
 	}
 

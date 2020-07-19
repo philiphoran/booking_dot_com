@@ -8,11 +8,12 @@ import org.openqa.selenium.By;
 public class BookingDotCom {
 	LocalDate startDate = LocalDate.now().plusMonths(3);
 	LocalDate endDate = startDate.plusDays(1);
+	String webBrowser = "firefox";
 
 	@Test
 	public void Ensure_The_Limerick_Stand_Hotel_has_Sauna_option_and_is_present_in_Search_Results() {
 
-		Booking bookingTest1 = new Booking("chrome");
+		Booking bookingTest1 = new Booking(webBrowser);
 		bookingTest1.enterLocation("Limerick");
 		bookingTest1.selectStartandEndDates(startDate, endDate);
 		bookingTest1.selectAdultsChildrenRooms(2, 0, 1);
@@ -31,7 +32,7 @@ public class BookingDotCom {
 
 	@Test
 	void Ensure_The_George_Limerick_Hotel_has_Sauna_option_and_is_not_present_in_Search_Results() {
-		Booking bookingTest2 = new Booking("chrome");
+		Booking bookingTest2 = new Booking(webBrowser);
 		bookingTest2.enterLocation("Limerick");
 		bookingTest2.selectStartandEndDates(startDate, endDate);
 		bookingTest2.selectAdultsChildrenRooms(2, 0, 1);
@@ -50,7 +51,7 @@ public class BookingDotCom {
 
 	@Test
 	void Ensure_when_5_Star_is_selected_that_The_Savoy_Hotel_is_present_in_Search_Results() {
-		Booking bookingTest3 = new Booking("chrome");
+		Booking bookingTest3 = new Booking(webBrowser);
 		bookingTest3.enterLocation("Limerick");
 		bookingTest3.selectStartandEndDates(startDate, endDate);
 		bookingTest3.selectAdultsChildrenRooms(2, 0, 1);
@@ -68,7 +69,7 @@ public class BookingDotCom {
 
 	@Test
 	void Ensure_when_5_Star_is_selected_that_The_George_Limerick_Hotel_is_not_present_in_Search_Results() {
-		Booking bookingTest4 = new Booking("chrome");
+		Booking bookingTest4 = new Booking(webBrowser);
 		bookingTest4.enterLocation("Limerick");
 		bookingTest4.selectStartandEndDates(startDate, endDate);
 		bookingTest4.selectAdultsChildrenRooms(2, 0, 1);
