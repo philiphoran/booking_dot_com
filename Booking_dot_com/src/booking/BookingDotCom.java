@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 public class BookingDotCom {
 	LocalDate startDate = LocalDate.now().plusMonths(3);
 	LocalDate endDate = startDate.plusDays(1);
-	String webBrowser = "firefox";
+	String webBrowser = "chrome";
 
 	@Test
 	public void Ensure_The_Limerick_Stand_Hotel_has_Sauna_option_and_is_present_in_Search_Results() {
